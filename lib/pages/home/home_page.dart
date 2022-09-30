@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/widgets/cards/project_card.dart';
 import '../../widgets/cards/intro_card.dart';
 import '../../widgets/header/header.dart';
-import '../../widgets/header/project_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -30,7 +30,14 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  ProjectCard(),
+                  ProjectCard(
+                    projectName: "My Project",
+                    projectYear: 2022,
+                    projectDescription:
+                        "This is the project's description. You can write your own description here.",
+                    projectImage:
+                        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                  )
                 ],
               ),
             )),
