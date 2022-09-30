@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/cards/intro_card.dart';
+import '../../widgets/header/header.dart';
+import '../../widgets/header/project_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,34 +19,18 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          Text(
-                            "Welcome back",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.w300),
-                          ),
-                          Text(
-                            "Sean's portfolio",
-                            style: TextStyle(
-                                fontSize: 28, fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                      const Icon(
-                        Icons.account_circle,
-                        color: Colors.black,
-                        size: 30,
-                      )
-                    ],
-                  )
+                  Header(),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    "Projects",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ProjectCard(),
                 ],
               ),
             )),
